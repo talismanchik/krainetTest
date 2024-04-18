@@ -1,13 +1,92 @@
-@import 'promo/promo';
+@forward 'promo/promo';
+@forward 'benefit/benefit';
+@forward 'contacts/contacts';
 
 body {
   box-sizing: border-box;
+  margin: 0 auto;
+  font-family: var(--font-family-primary);
+
+  @media (width >= 1140px) {
+    &::after {
+      content: '';
+
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      min-height: 800px;
+
+      background: linear-gradient(to top, #bde5f9 10%, #bdd8ea);
+    }
+  }
+}
+
+h1 {
   margin: 0;
+  font-size: var(--font-size-xxxxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xxxl);
+
+  @media (width <= 767px) {
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-xxl);
+  }
+}
+
+h2 {
+  margin: 0;
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xxxl);
+
+  @media (width <= 767px) {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+  }
+}
+
+h3 {
+  margin: 0;
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-l);
+}
+
+h4 {
+  margin: 0;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-s);
+}
+
+h5 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xl);
+}
+
+p {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
+}
+
+a {
+  margin: 0;
+
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-s);
+  color: inherit;
+  text-decoration: none;
 }
 
 .container {
-  position: relative;
-
   box-sizing: border-box;
   max-width: 1140px;
   min-height: 100vh;
@@ -16,19 +95,7 @@ body {
   border-right: 1px solid #000;
   border-left: 1px solid #000;
 
-  &::after {
-    content: '';
-
-    position: fixed;
-    z-index: -2;
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    min-height: 800px;
-
-    background: linear-gradient(to top, #bde5f9 10%, #bdd8ea);
-
-    //radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+  @media (width <= 1280px) {
+    border: none;
   }
 }

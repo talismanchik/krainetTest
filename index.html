@@ -1,75 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="#"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/blocks/style.scss">
+    <link rel="stylesheet" href="/blocks/variables/index.scss">
+    <link rel="stylesheet" href="/blocks/fonts.scss">
     <title>Krainet Test</title>
 </head>
 <body>
 <div class="container">
     <section class="promo">
-        <img class="promo__photo" src="./assets/Background.png" alt="моя фотография">
-        <p class="promo__my-name">Меня зовут Александра Смит</p>
-        <h1 class="promo__title">Я web-разработчик<br>из города Москва</h1>
-        <a class="promo__portfolio">Портфолио</a>
-        <a class="promo__about">Про меня</a>
+        <div class="promo__photo"></div>
+        <button class="promo__burger">
+            <span class="promo__burger-line"></span>
+        </button>
+        <div class="promo__text-wrapper">
+            <p class="promo__my-name">Меня зовут Александра Смит</p>
+            <h1 class="promo__title">Я web-разработчик<br>из города Москва</h1>
+            <div class="promo__link-wrapper">
+                <a href="#" class="promo__portfolio">Портфолио</a>
+                <a href="#" class="promo__about">Про меня</a>
+            </div>
+        </div>
     </section>
     <section class="benefit">
         <div class="benefit__pre-title">Опыт</div>
         <h2 class="benefit__title">Чем я буду полезна</h2>
         <div class="benefit__flex-wrapper">
             <div class="benefit__resume-group">
-                <h3>Образование</h3>
+                <h3 class="benefit__resume-group__title">Образование</h3>
                 <article class="benefit__item">
-                    <h4>
-                        <svg></svg>
-                        МГТУ им. Н. Э. Баумана
-                    </h4>
-                    <span>Диплом магистра | Москва (2014-2020)</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <div class="benefit__item-header">
+                        <img class="benefit__icon" src="assets/svg/student.svg" alt="иконка студента">
+                        <h4 class="benefit__item-title">
+                            МГТУ им. Н. Э. Баумана<br>
+                            <span class="benefit__item-sub-title">Диплом магистра | Москва (2014-2020)</span>
+                        </h4>
+                    </div>
+                    <p class="benefit__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmo. </p>
                 </article>
                 <article class="benefit__item">
-                    <h4>
-                        <svg></svg>
-                        Udemy
-                    </h4>
-                    <span>Курсы по Web-разработке </span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <div class="benefit__item-header">
+                        <img class="benefit__icon" src="assets/svg/courses.svg" alt="иконка с сертификатом">
+                        <h4 class="benefit__item-title">
+                            Udemy<br>
+                            <span class="benefit__item-sub-title">Курсы по Web-разработке</span>
+                        </h4>
+                    </div>
+                    <p class="benefit__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmo. </p>
+                        eiusmo.</p>
                 </article>
             </div>
             <div class="benefit__resume-group">
-                <h3>Опыт работы</h3>
+                <h3 class="benefit__resume-group__title">Опыт работы</h3>
                 <article class="benefit__item">
-                    <h4>
-                        <svg></svg>
-                        Front-End Developer
-                    </h4>
-                    <span>EPAM | Москва (2018-2019)</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <div class="benefit__item-header">
+                        <img class="benefit__icon" src="assets/svg/developer.svg" alt="иконка с сертификатом">
+                        <h4 class="benefit__item-title">
+                            Front-End Developer<br>
+                            <span class="benefit__item-sub-title">EPAM | Москва (2018-2019)</span>
+                        </h4>
+                    </div>
+                    <p class="benefit__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmo. </p>
                 </article>
                 <article class="benefit__item">
-                    <h4>
-                        <svg></svg>
-                        UI/UX Designer
-                    </h4>
-                    <span>Squad Team | Москва (2018)</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <div class="benefit__item-header">
+                        <img class="benefit__icon" src="assets/svg/designer.svg" alt="иконка с сертификатом">
+                        <h4 class="benefit__item-title">
+                            UI/UX Designer<br>
+                            <span class="benefit__item-sub-title">Squad Team | Москва (2018)</span>
+                        </h4>
+                    </div>
+                    <p class="benefit__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
                         labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmo. </p>
                 </article>
             </div>
         </div>
     </section>
-    <section></section>
+    <section class="contacts">
+        <img class="contacts__photo" src="./assets/Photo.png" alt="фотография Александры">
+        <div class="contacts__wrapper">
+            <div class="contacts__pre-title">Контакты</div>
+            <h2 class="contacts__title">Свяжитесь со мной</h2>
+            <h4>Любым удобным для вас способом:</h4>
+            <div class="contacts__svg">
+                <img src="assets/svg/Facebook.svg" alt="логотип Facebook">
+                <img src="assets/svg/Telegram.svg" alt="логотип Telegram">
+                <img src="assets/svg/Instagram.svg" alt="логотип Instagram">
+            </div>
+            <h4>Или оставьте ваши данные и я сама вам напишу:</h4>
+            <form action="#">
+                <input type="text" aria-label="Ваше имя">
+                <input type="email" aria-label="Ваша почта">
+                <textarea aria-label="Ваше сообщение"></textarea>
+                <button type="submit"></button>
+
+            </form>
+        </div>
+    </section>
 </div>
 <script type="module" src="/main.js"></script>
+
 </body>
 </html>
