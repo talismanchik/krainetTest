@@ -12,8 +12,8 @@
     align-items: start;
     justify-content: space-between;
 
+    margin-inline: 65px;
     padding-top: 85px;
-    padding-inline: 65px;
 
     text-align: start;
 
@@ -130,11 +130,11 @@
     margin-top: 46px;
 
     &__flex-wrapper {
-      padding-inline: 3%;
+      margin-inline: 3%;
     }
 
     &__resume-group {
-      width: calc(100% - 50px);
+      width: calc(90% - 50px);
     }
 
     &__paragraph {
