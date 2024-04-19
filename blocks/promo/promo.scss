@@ -23,32 +23,9 @@
   }
 
   &__text-wrapper {
+    display: inline-block;
+    margin-left: 10px;
     padding-top: 206px;
-  }
-
-  &__my-name {
-    position: relative;
-
-    padding: 0 0 9px 10px;
-
-    font-size: var(--font-size-m);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-l);
-
-    &::after {
-      content: '';
-
-      position: absolute;
-      z-index: -1;
-      top: -6px;
-      left: 0;
-
-      width: 36px;
-      height: 36px;
-
-      background-color: var(--prymary-color);
-      border-radius: 9999px;
-    }
   }
 
   &__link-wrapper {
@@ -59,7 +36,7 @@
   }
 
   &__portfolio {
-    padding: 12px 25px;
+    padding: 12px 26px;
     background-color: var(--prymary-color);
     box-shadow: 0 4px 4px 0 rgb(0 0 0 / 15%);
   }

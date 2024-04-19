@@ -1,50 +1,8 @@
 .benefit {
-  padding-top: 120px;
-  padding-bottom: 200px;
+  margin-top: 46px;
   text-align: center;
 
-  &__pre-title {
-    position: relative;
-
-    display: inline-block;
-
-    font-size: var(--font-size-m);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-l);
-
-    &::after {
-      content: '';
-
-      position: absolute;
-      z-index: -1;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      width: 36px;
-      height: 36px;
-
-      background-color: var(--prymary-color);
-      border-radius: 9999px;
-    }
-  }
-
   &__title {
-    position: relative;
-    padding-top: 5px;
-
-    &::after {
-      content: '';
-
-      position: absolute;
-      bottom: -23.5px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 60px;
-
-      border: 3px solid var(--prymary-color);
-    }
   }
 
   &__flex-wrapper {
@@ -74,40 +32,41 @@
     gap: 45px;
 
     box-sizing: border-box;
-    width: 45%;
-    padding-left: 50px;
+    width: 40%;
+    margin-left: 50px;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 15px;
+      left: -43px;
+
+      //transform: rotate(-90deg) translate(-50%);
+
+      width: 1px;
+      height: 95%;
+
+      background: #000;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 9px;
+      left: -50px;
+
+      width: 15px;
+      height: 15px;
+
+      background-color: var(--prymary-color);
+      border-radius: 999px;
+    }
 
     &__title {
       position: relative;
       text-align: start;
-
-      &::before {
-        content: '';
-
-        position: absolute;
-        top: 15px;
-        left: -215px;
-        transform: rotate(-90deg) translate(-50%);
-
-        width: 344px;
-        height: 1px;
-
-        background: #000;
-      }
-
-      &::after {
-        content: '';
-
-        position: absolute;
-        top: 9px;
-        left: -50px;
-
-        width: 15px;
-        height: 15px;
-
-        background-color: var(--prymary-color);
-        border-radius: 999px;
-      }
     }
 
     @media (width <= 950px) {
@@ -168,13 +127,14 @@
   }
 
   @media (width <= 767px) {
+    margin-top: 46px;
+
     &__flex-wrapper {
       padding-inline: 3%;
     }
 
     &__resume-group {
-      width: 100%;
-      padding-left: 50px;
+      width: calc(100% - 50px);
     }
 
     &__paragraph {

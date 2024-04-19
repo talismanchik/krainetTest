@@ -17,7 +17,7 @@
             <span class="promo__burger-line"></span>
         </button>
         <div class="promo__text-wrapper">
-            <p class="promo__my-name">Меня зовут Александра Смит</p>
+            <p class="utils__pre-title utils__circle-left">Меня зовут Александра Смит</p>
             <h1 class="promo__title">Я web-разработчик<br>из города Москва</h1>
             <div class="promo__link-wrapper">
                 <a href="#" class="promo__portfolio">Портфолио</a>
@@ -26,8 +26,8 @@
         </div>
     </section>
     <section class="benefit">
-        <div class="benefit__pre-title">Опыт</div>
-        <h2 class="benefit__title">Чем я буду полезна</h2>
+        <p class="utils__pre-title utils__circle-center">Опыт</p>
+        <h2 class="benefit__title utils__decorator-center">Чем я буду полезна</h2>
         <div class="benefit__flex-wrapper">
             <div class="benefit__resume-group">
                 <h3 class="benefit__resume-group__title">Образование</h3>
@@ -92,8 +92,8 @@
     <section class="contacts">
         <img class="contacts__photo" src="./assets/Photo.png" alt="фотография Александры">
         <div class="contacts__wrapper">
-            <div class="contacts__pre-title">Контакты</div>
-            <h2 class="contacts__title">Свяжитесь со мной</h2>
+            <p class="utils__pre-title utils__circle-left">Контакты</p>
+            <h2 class="utils__decorator-left contacts__title">Свяжитесь со мной</h2>
             <h4>Любым удобным для вас способом:</h4>
             <div class="contacts__svg">
                 <img src="assets/svg/Facebook.svg" alt="логотип Facebook">
@@ -101,11 +101,22 @@
                 <img src="assets/svg/Instagram.svg" alt="логотип Instagram">
             </div>
             <h4>Или оставьте ваши данные и я сама вам напишу:</h4>
-            <form action="#">
-                <input type="text" aria-label="Ваше имя">
-                <input type="email" aria-label="Ваша почта">
-                <textarea aria-label="Ваше сообщение"></textarea>
-                <button type="submit"></button>
+            <form class="contacts__form" action="#">
+                <div class="contacts__inputs-wrapper">
+                    <div class="contacts__textarea-group">
+                        <input class="contacts__input-item" id="name" type="text" aria-label="Ваше имя">
+                        <label class='contacts__textarea-label' for="name">Ваше имя</label>
+                    </div>
+                    <div class="contacts__textarea-group">
+                        <input class="contacts__input-item" id="email" type="email" aria-label="Ваша почта">
+                        <label class='contacts__textarea-label' for="email">Ваша почта</label>
+                    </div>
+                </div>
+                <div class="contacts__textarea-group">
+                    <textarea class="contacts__textarea-item" id="message" aria-label="Ваше сообщение"></textarea>
+                    <label class='contacts__textarea-label' for="message">Ваше сообщение</label>
+                </div>
+                <button class="utils__button" type="submit">Отправить сообщение</button>
 
             </form>
         </div>

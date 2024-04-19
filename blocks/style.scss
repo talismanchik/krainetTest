@@ -91,6 +91,7 @@ a {
   max-width: 1140px;
   min-height: 100vh;
   margin: 0 auto;
+  padding-bottom: 90px;
 
   border-right: 1px solid #000;
   border-left: 1px solid #000;
@@ -98,4 +99,12 @@ a {
   @media (width <= 1280px) {
     border: none;
   }
+
+  @media (width <= 767px) {
+    padding-bottom: 50px;
+  }
+}
+
+button {
+  border: none;
 }
