@@ -17,7 +17,8 @@ body {
       left: 0;
 
       width: 100vw;
-      min-height: 800px;
+      height: 800px;
+      max-height: 100vh;
 
       background: linear-gradient(to top, #bde5f9 10%, #bdd8ea);
     }
