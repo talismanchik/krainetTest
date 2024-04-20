@@ -89,24 +89,6 @@
       background-color: #000;
     }
 
-    &.active span {
-      transform: scale(0);
-    }
-
-    &.active::before {
-      top: 43%;
-      transform: rotate(45deg);
-      width: 36px;
-      border-radius: 10px;
-    }
-
-    &.active::after {
-      bottom: 43%;
-      transform: rotate(-45deg);
-      width: 36px;
-      border-radius: 10px;
-    }
-
     &:hover {
       scale: 1.01;
     }

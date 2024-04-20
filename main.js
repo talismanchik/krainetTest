@@ -1,3 +1,7 @@
 document.querySelector('.promo__burger').addEventListener('click', function () {
-  this.classList.toggle('active')
+  document.querySelector('body').classList.toggle('menu-open')
+})
+
+document.querySelector('.menu__close').addEventListener('click', function () {
+  document.querySelector('body').classList.toggle('menu-open')
 })

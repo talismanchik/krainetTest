@@ -1,9 +1,130 @@
 .menu {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -150%;
 
+  width: calc((100vw - 1140px) / 2);
+  min-width: 250px;
   height: 100vh;
 
   background-color: var(--prymary-color);
+
+  transition: 0.5s;
+
+  &__navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: end;
+
+    margin-top: 140px;
+    margin-right: 40px;
+  }
+
+  &__list {
+    color: #000;
+    white-space: nowrap;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 15px;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: -28px;
+      transform: translateY(-50%);
+
+      width: 13px;
+      height: 13px;
+
+      border: 1px solid #000;
+      border-radius: 999px;
+    }
+  }
+
+  &__link {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-xl);
+    color: #fff;
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    width: 30px;
+    height: 30px;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: -6px;
+      transform: rotate(45deg) translateY(-50%);
+
+      width: 40px;
+      height: 3px;
+
+      background: #000;
+      border-radius: 999px;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: -4px;
+      transform: rotate(-45deg) translateY(-50%);
+
+      width: 40px;
+      height: 3px;
+
+      background: #000;
+      border-radius: 999px;
+    }
+  }
+}
+
+body.menu-open .menu {
+  left: 0;
 }
