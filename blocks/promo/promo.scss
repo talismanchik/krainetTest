@@ -7,7 +7,8 @@
     position: absolute;
     z-index: -1;
     top: 0;
-    transform: translateX(-20%);
+    left: 50%;
+    transform: translateX(-50%);
 
     width: 100%;
     max-width: 1920px;
@@ -17,14 +18,15 @@
     background: url('/assets/Background.png') center no-repeat;
     background-size: cover;
 
-    @media (width <= 1500px) {
+    @media (width <= 767px) {
+      left: 0;
       transform: none;
+      max-height: 640px;
     }
   }
 
   &__text-wrapper {
     display: inline-block;
-    margin-left: 10px;
     padding-top: 206px;
   }
 
@@ -35,17 +37,22 @@
     padding-top: 25px;
   }
 
-  &__portfolio {
-    padding: 12px 26px;
-    background-color: var(--prymary-color);
-    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 15%);
+  &__about {
+    transition: 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      scale: 0.95;
+    }
   }
 
   &__burger {
     cursor: pointer;
 
     position: fixed;
-    z-index: 100;
     top: 20px;
     right: 30px;
 
@@ -94,14 +101,25 @@
     }
   }
 
-  @media (width <= 767px) {
-    &__photo {
-      transform: none;
-      background-position-x: 60%;
-    }
+  @media (width <= 1280px) {
+    margin-left: 10px;
+  }
 
-    &__text-wrapper {
-      padding-left: 10px;
+  @media (width <= 767px) {
+    height: 640px;
+
+    &__photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: auto;
+      transform: none;
+
+      width: 340px;
+      height: 640px;
+
+      background: url('/assets/BackgroundMobile.png') repeat;
+      background-size: cover;
     }
 
     &__link-wrapper {

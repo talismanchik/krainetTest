@@ -1,0 +1,58 @@
+.social {
+  display: none;
+
+  @media (width >= 1400px) {
+    position: fixed;
+    top: 226px;
+    left: -120px;
+    transform: rotate(-90deg) translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 340px;
+    height: 24px;
+
+    &__title {
+      position: relative;
+      font-size: var(--font-size-m);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-m);
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        top: 40%;
+        right: -85px;
+        transform: translateY(50%);
+
+        width: 70px;
+        height: 2px;
+
+        background: #000;
+      }
+    }
+
+    &__list {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    &__item {
+      a {
+        img {
+          width: 20px;
+          height: 20px;
+          transition: 0.2s;
+
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+    }
+  }
+}

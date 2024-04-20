@@ -2,26 +2,30 @@
 @forward 'benefit/benefit';
 @forward 'contacts/contacts';
 @forward 'menu/menu';
+@forward 'social-nav/social';
 
 body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: var(--font-family-primary);
 
-  @media (width >= 1140px) {
-    &::after {
-      content: '';
+  &::before {
+    content: '';
 
-      position: absolute;
-      z-index: -2;
-      top: 0;
-      left: 0;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
 
-      width: 100vw;
-      height: 800px;
-      max-height: 100vh;
+    width: 100%;
+    height: 800px;
+    max-height: 100vh;
 
-      background: linear-gradient(to top, #bde5f9 10%, #bdd8ea);
+    background: linear-gradient(to top, #bde5f9 10%, #bdd8ea);
+
+    @media (width <= 767px) {
+      max-height: 640px;
+      background: linear-gradient(#bdd9ed 10%, #bce6f9 50%);
     }
   }
 }
@@ -109,4 +113,14 @@ a {
 
 button {
   border: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffa501;
+  border-radius: 5px;
 }

@@ -35,12 +35,23 @@
 
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);
+
+    & ._error-label {
+      position: absolute;
+      bottom: -17px;
+      left: 20px;
+      color: var(--error-color);
+    }
   }
 
   &__input-item {
     width: calc(100% - 44px);
     height: 45px;
     padding-inline: 20px;
+
+    &._error {
+      border: 2px solid var(--error-color);
+    }
 
     &:focus ~ label {
       font-weight: var(--font-weight-bold);
@@ -52,6 +63,10 @@
     width: calc(100% - 44px);
     height: 143px;
     padding: 10px 20px;
+
+    &._error {
+      border: 2px solid var(--error-color);
+    }
 
     &:focus ~ label {
       font-weight: var(--font-weight-bold);
