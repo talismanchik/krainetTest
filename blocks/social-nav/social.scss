@@ -3,8 +3,8 @@
 
   @media (width >= 1400px) {
     position: fixed;
-    top: 226px;
-    left: -120px;
+    top: 214px;
+    left: -108px;
     transform: rotate(-90deg) translateX(-50%);
 
     display: flex;
@@ -38,6 +38,7 @@
     &__list {
       display: flex;
       gap: 15px;
+      align-items: end;
       list-style: none;
     }
 

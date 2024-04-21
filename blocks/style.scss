@@ -1,8 +1,14 @@
+@forward 'variables/index';
 @forward 'promo/promo';
 @forward 'benefit/benefit';
 @forward 'contacts/contacts';
 @forward 'menu/menu';
 @forward 'social-nav/social';
+@forward 'fonts';
+
+* {
+  letter-spacing: -1px;
+}
 
 body {
   box-sizing: border-box;
@@ -84,7 +90,6 @@ p {
 
 a {
   margin: 0;
-
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-s);

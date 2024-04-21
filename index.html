@@ -5,29 +5,27 @@
     <link rel="icon" type="image/svg+xml" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/blocks/style.scss">
-    <link rel="stylesheet" href="/blocks/variables/index.scss">
-    <link rel="stylesheet" href="/blocks/fonts.scss">
     <title>Krainet Test</title>
 </head>
 <body>
 <div class="container">
     <section class="promo">
         <div class="promo__photo"></div>
-        <button class="promo__burger">
+        <button class="promo__burger" aria-label="открыть меню">
             <span class="promo__burger-line"></span>
         </button>
         <div class="promo__text-wrapper">
-            <p class="utils__pre-title utils__circle-left">Меня зовут Александра Смит</p>
+            <p class="pre-title circle-left">Меня зовут Александра Смит</p>
             <h1 class="promo__title">Я web-разработчик<br>из города Москва</h1>
             <div class="promo__link-wrapper">
-                <a href="#" class="utils__button">Портфолио</a>
-                <a href="#" class="promo__about">Про меня</a>
+                <a class="button" href="#">Портфолио</a>
+                <a class="promo__about" href="#">Про меня</a>
             </div>
         </div>
     </section>
     <section class="benefit">
-        <p class="utils__pre-title utils__circle-center">Опыт</p>
-        <h2 class="benefit__title utils__decorator-center">Чем я буду полезна</h2>
+        <p class="pre-title circle-center">Опыт</p>
+        <h2 class="benefit__title decorator-center">Чем я буду полезна</h2>
         <div class="benefit__flex-wrapper">
             <div class="benefit__resume-group">
                 <h3 class="benefit__resume-group__title">Образование</h3>
@@ -90,39 +88,46 @@
         </div>
     </section>
     <section class="contacts">
-        <img class="contacts__photo" src="./assets/Photo.png" alt="фотография Александры">
+        <img class="contacts__photo" src="assets/Photo@1x.png"
+             srcset="assets/Photo@2x.png x2, assets/Photo@3x.png 3x, assets/Photo@4x.png 4x"
+             alt="фотография Александры">
         <div class="contacts__wrapper">
-            <p class="utils__pre-title utils__circle-left">Контакты</p>
-            <h2 class="utils__decorator-left contacts__title">Свяжитесь со мной</h2>
+            <p class="pre-title circle-left">Контакты</p>
+            <h2 class="decorator-left contacts__title">Свяжитесь со мной</h2>
             <h4>Любым удобным для вас способом:</h4>
-            <div class="contacts__svg">
-                <a href="#">
+            <div class="contacts__social">
+                <a target="_blank" href="https://www.facebook.com/?locale=ru_RU">
                     <img src="assets/svg/Facebook.svg" alt="логотип Facebook">
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://telegram.org/">
                     <img src="assets/svg/Telegram.svg" alt="логотип Telegram">
                 </a>
-                <a href="#">
+                <a target="_blank" href="https://www.instagram.com/">
                     <img src="assets/svg/Instagram.svg" alt="логотип Instagram">
                 </a>
             </div>
             <h4>Или оставьте ваши данные и я сама вам напишу:</h4>
-            <form class="contacts__form" action="#" id="form">
+            <form class="contacts__form" id="form">
                 <div class="contacts__inputs-wrapper">
                     <div class="contacts__textarea-group">
-                        <input class="contacts__input-item" id="name" type="text" aria-label="Ваше имя">
+                        <input class="contacts__input-item" id="name" name="name" type="text" aria-label="Ваше имя">
                         <label class='contacts__textarea-label' for="name">Ваше имя</label>
                     </div>
                     <div class="contacts__textarea-group">
-                        <input class="contacts__input-item _email" id="email" type="text" aria-label="Ваша почта">
+                        <input class="contacts__input-item _email" id="email" name="email" type="text"
+                               aria-label="Ваша почта">
                         <label class='contacts__textarea-label' for="email">Ваша почта</label>
                     </div>
                 </div>
                 <div class="contacts__textarea-group">
-                    <textarea class="contacts__textarea-item" id="message" aria-label="Ваше сообщение"></textarea>
+                    <textarea class="contacts__textarea-item" id="message" name="message"
+                              aria-label="Ваше сообщение"></textarea>
                     <label class='contacts__textarea-label' for="message">Ваше сообщение</label>
                 </div>
-                <button class="utils__button" type="submit">Отправить сообщение</button>
+                <div class="contacts__submit-wrapper">
+                    <button class="button contacts__submit" id="send-button" type="submit">Отправить сообщение
+                    </button>
+                </div>
             </form>
         </div>
     </section>
@@ -130,48 +135,61 @@
 <nav class="social">
     <p class="social__title">Социальные сети</p>
     <ul class="social__list">
-        <li class="social__item"><a href="#"><img src="/assets/svg/Github.svg" alt="github link"></a></li>
-        <li class="social__item"><a href="#"><img src="/assets/svg/Instagram.svg" alt="instagram link"></a></li>
-        <li class="social__item"><a href="#"><img src="/assets/svg/Facebook.svg" alt="facebook link"></a></li>
+        <li class="social__item">
+            <a target="_blank" href="https://github.com/">
+                <img src="/assets/svg/Github.svg" alt="github link">
+            </a>
+        </li>
+        <li class="social__item">
+            <a target="_blank" href="https://www.instagram.com/">
+                <img src="/assets/svg/Instagram.svg" alt="instagram link">
+            </a>
+        </li>
+        <li class="social__item">
+            <a target="_blank" href="https://www.facebook.com/?locale=ru_RU">
+                <img src="/assets/svg/Facebook.svg" alt="facebook link">
+            </a>
+        </li>
     </ul>
 </nav>
 <div class="menu">
     <div class="menu__body">
-        <span class="menu__close"></span>
+        <span class="menu__close" aria-label="закрыть меню"></span>
         <nav class="menu__navigation">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#" class="menu__link">ПРО МЕНЯ</a>
+                    <a class="menu__link" href="#">ПРО МЕНЯ</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">МОЙ ОПЫТ</a>
+                    <a class="menu__link" href="#">МОЙ ОПЫТ</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#" class="menu__link">КОНТАКТЫ</a>
+                    <a class="menu__link" href="#">КОНТАКТЫ</a>
                 </li>
             </ul>
         </nav>
         <nav>
             <ul class="menu__social">
                 <li class="menu__social-item">
-                    <a href="#" class="menu__social-link">
-                        <img src="/assets/svg/Github.svg" alt="github link" class="menu__svg">
+                    <a class="menu__social-link" target="_blank" href="https://github.com/">
+                        <img class="menu__svg" src="/assets/svg/Github.svg" alt="github link">
                     </a>
                 </li>
                 <li class="menu__social-item">
-                    <a href="#" class="menu__social-link">
-                        <img src="/assets/svg/Instagram.svg" alt="instagram link" class="menu__svg">
+                    <a class="menu__social-link" target="_blank" href="https://www.instagram.com/">
+                        <img class="menu__svg" src="/assets/svg/Instagram.svg" alt="instagram link">
                     </a>
                 </li>
                 <li class="menu__social-item">
-                    <a href="#" class="menu__social-link">
-                        <img src="/assets/svg/Facebook.svg" alt="facebook link" class="menu__svg">
+                    <a class="menu__social-link" target="_blank" href="https://www.facebook.com/?locale=ru_RU">
+                        <img class="menu__svg" src="/assets/svg/Facebook.svg" alt="facebook link">
                     </a>
                 </li>
             </ul>
         </nav>
     </div>
 </div>
+
 <script type="module" src="/main.js"></script>
 </body>
 </html>

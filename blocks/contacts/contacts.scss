@@ -1,11 +1,18 @@
 .contacts {
   margin-top: 46px;
+  padding-top: 27px;
   padding-inline: 10px;
 
   &__wrapper {
     width: 100%;
     max-width: 585px;
     margin: 0 auto;
+
+    @media (width >= 767px) {
+      width: calc(100% - 10px);
+      padding-top: 5px;
+      padding-left: 10px;
+    }
   }
 
   &__title {
@@ -18,13 +25,13 @@
     }
   }
 
-  &__svg {
+  &__social {
     display: flex;
     gap: 25px;
     align-items: center;
     justify-content: start;
 
-    margin-block: 20px;
+    margin-block: 20px 12px;
   }
 
   &__textarea-group {
@@ -46,7 +53,7 @@
 
   &__input-item {
     width: calc(100% - 44px);
-    height: 45px;
+    height: 40px;
     padding-inline: 20px;
 
     &._error {
@@ -61,7 +68,7 @@
   &__textarea-item {
     resize: none;
     width: calc(100% - 44px);
-    height: 143px;
+    height: 120px;
     padding: 10px 20px;
 
     &._error {
@@ -73,7 +80,7 @@
     }
 
     @media (width >= 767px) {
-      height: 190px;
+      height: 170px;
     }
   }
 
@@ -99,16 +106,35 @@
 
   &__form {
     margin-top: 30px;
+
+    @media (width >= 920px) {
+      margin-right: 35px;
+    }
   }
 
   &__photo {
     display: none;
     width: 400px;
     height: 600px;
+    margin-left: 50px;
 
     @media (width >= 920px) {
       display: block;
     }
+  }
+
+  &__submit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media (width >= 767px) {
+      display: block;
+    }
+  }
+
+  &__submit {
   }
 
   @media (width >= 767px) {
@@ -120,5 +146,7 @@
     grid-template-columns: 400px 1fr;
     gap: 70px;
     justify-content: space-around;
+
+    padding-inline: 0;
   }
 }
