@@ -1,7 +1,7 @@
 .social {
   display: none;
 
-  @media (width >= 1400px) {
+  @media (min-width: 1400px) {
     position: fixed;
     top: 214px;
     left: -108px;
@@ -31,7 +31,7 @@
         width: 70px;
         height: 2px;
 
-        background: #000;
+        background: var(--text-color);
       }
     }
 

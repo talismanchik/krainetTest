@@ -62,7 +62,7 @@
 
     background-color: var(--prymary-color);
 
-    @media (width >= 767px) {
+    @media (min-width: 767px) {
       bottom: -8px;
     }
   }
@@ -84,7 +84,7 @@
 
     background-color: var(--prymary-color);
 
-    @media (width >= 767px) {
+    @media (min-width: 767px) {
       bottom: -20px;
     }
   }

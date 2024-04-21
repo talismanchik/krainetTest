@@ -22,7 +22,7 @@
     background: url('/assets/Background@2x.png') center no-repeat;
     background-size: cover;
 
-    @media (width <= 767px) {
+    @media (max-width: 767px) {
       left: 0;
       transform: none;
       max-height: 640px;
@@ -33,7 +33,7 @@
     display: inline-block;
     padding-top: 206px;
 
-    @media (width <= 1280px) {
+    @media (max-width: 1280px) {
       margin-left: 10px;
     }
   }
@@ -86,7 +86,7 @@
       width: 30px;
       height: 3px;
 
-      background-color: #000;
+      background-color: var(--text-color);
 
       transition: all 0.3s ease 0s;
     }
@@ -103,7 +103,7 @@
       transform: scale(1);
       width: 36px;
       height: 3px;
-      background-color: #000;
+      background-color: var(--text-color);
     }
 
     &:hover {
@@ -111,7 +111,7 @@
     }
   }
 
-  @media (width <= 767px) {
+  @media (max-width: 767px) {
     height: 640px;
 
     &__photo {
